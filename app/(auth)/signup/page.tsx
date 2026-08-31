@@ -72,10 +72,10 @@ const page = () => {
 
   return (
     <>
-      <div className="container flex flex-row gap-5 justify-center items-center h-screen mb-[20vh] mt-[-10vh]">
+      <div className="container mx-auto flex flex-row gap-5 justify-center items-center h-screen">
         <div className="card flex flex-col gap-3 border-2 rounded-lg lg:w-1/2 p-5 mt-[30vh]">
           <header className="flex flex-col items-center gap-0.5 border-2 rounded-lg p-5 ">
-            <h2 className="text-2xl font-bold">Your Title</h2>
+            <h2 className="text-2xl font-bold">WorkFlow HR</h2>
             <p className="text-gray-600">Create account</p>
           </header>
 
@@ -86,7 +86,7 @@ const page = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setname(e.target.value)}
-                className="border-2 border-gray-300 p-2 m-2 rounded-xl"
+                className="border-2 border-gray-300 p-2 m-2 rounded-xl w-2xl"
                 placeholder="Enter your full name"
               />
             </div>
@@ -95,7 +95,7 @@ const page = () => {
               Email:{" "}
               <input
                 type="email"
-                className="border-2 border-gray-300 p-2 m-2 rounded-xl"
+                className="border-2 border-gray-300 p-2 m-2 rounded-xl w-2xl"
                 value={email}
                 onChange={(e) => setemail(e.target.value)}
                 placeholder="Enter your email"
@@ -104,17 +104,19 @@ const page = () => {
 
             <div className="flex flex-col justify-center my-2">
               Password:{" "}
+
+              <div className="relative my-2">
               <input
                 type={showPassword ? "text" : "password"}
                 minLength={6}
-                className="border-2 border-gray-300 p-2 m-2 rounded-xl"
+                className="border-2 border-gray-300 p-2 m-2 rounded-xl w-2xl"
                 value={password}
                 onChange={(e) => setpassword(e.target.value)}
                 placeholder="Enter your password"
               />
               <button
                 type="button"
-                className="absolute flex justify-center max-md:right-32 right-112 max-md:pt-6 pt-6.5 cursor-pointer"
+                className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
                 onClick={() => setShowPassword(!showPassword)}
               >
                 <img
@@ -123,21 +125,24 @@ const page = () => {
                   className="w-5 opacity-60 hover:opacity-100"
                 />
               </button>
+              </div>
             </div>
 
             <div className="flex flex-col justify-center my-2">
               Confirm Password:{" "}
+
+              <div className="relative my-2">
               <input
                 type={showComPassword ? "text" : "password"}
                 minLength={6}
-                className="border-2 border-gray-300 p-2 m-2 rounded-xl"
+                className="border-2 border-gray-300 p-2 m-2 rounded-xl w-2xl"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="Confirm your password"
               />
               <button
                 type="button"
-                className="absolute flex justify-center max-md:right-32 right-112 max-md:pt-6 pt-6.5 cursor-pointer"
+                className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
                 onClick={() => setShowComPassword(!showComPassword)}
               >
                 <img
@@ -146,6 +151,7 @@ const page = () => {
                   className="w-5 opacity-60 hover:opacity-100"
                 />
               </button>
+              </div>
             </div>
 
             <label
@@ -189,7 +195,7 @@ const page = () => {
                 type="text"
                 value={department}
                 onChange={(e) => setDepartment(e.target.value)}
-                className="border-2 border-gray-300 p-2 m-2 rounded-xl"
+                className="border-2 border-gray-300 p-2 m-2 rounded-xl w-2xl"
                 placeholder="Enter your dept name"
               />
             </div>

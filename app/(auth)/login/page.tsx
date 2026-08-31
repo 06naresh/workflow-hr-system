@@ -53,7 +53,7 @@ const Loginpage = () => {
       <div className="container flex flex-row gap-5 justify-center items-center h-screen mx-auto ">
         <div className="flex flex-col gap-3 border-2 rounded-lg lg:w-1/2 w-full p-5 ">
           <header className="flex flex-col items-center gap-0.5 border-2 rounded-lg p-5 ">
-            <h2 className="text-2xl font-bold">Your Title</h2>
+            <h2 className="text-2xl font-bold">WorkFlow HR</h2>
             <p className="text-gray-600">Sign in to account</p>
           </header>
 
@@ -62,7 +62,7 @@ const Loginpage = () => {
               Email:{" "}
               <input
                 type="email"
-                className="border-2 border-gray-300 p-2 m-2 rounded-xl"
+                className="border-2 border-gray-300 p-2 m-2 rounded-xl w-full"
                 value={email}
                 onChange={(e) => setemail(e.target.value)}
                 placeholder="Enter your email"
@@ -71,17 +71,19 @@ const Loginpage = () => {
 
             <div className="flex flex-col justify-center my-2">
               Password:{" "}
+
+              <div className="relative my-2">
               <input
                 type={showPassword ? "text" : "password"}
                 minLength={6}
-                className="border-2 border-gray-300 p-2 m-2 rounded-xl"
+                className="border-2 border-gray-300 p-2 m-2 rounded-xl w-full"
                 value={password}
                 onChange={(e) => setpassword(e.target.value)}
                 placeholder="Enter your password"
               />
               <button
                 type="button"
-                className="absolute flex justify-center max-md:right-32 right-112 max-md:pt-6 pt-6.5 cursor-pointer"
+                className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
                 onClick={() => setShowPassword(!showPassword)}
               >
                 <img
@@ -90,6 +92,7 @@ const Loginpage = () => {
                   className="w-5 opacity-60 hover:opacity-100"
                 />
               </button>
+              </div>
             </div>
 
             <div className="my-2">
